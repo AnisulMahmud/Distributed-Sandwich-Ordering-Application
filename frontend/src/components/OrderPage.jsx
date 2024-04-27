@@ -16,7 +16,9 @@ export const OrderPage = () => {
     {isLoading && <p>Loading...</p>}
     <div className='orders'>
      {
-      orders.map((order)=>{
+      orders
+      .sort((a,b) => b.id - a.id)
+      .map((order)=>{
         return(
         <div key={order.id} className='order-box'>
           <h2>Order Id: {order.id}</h2>

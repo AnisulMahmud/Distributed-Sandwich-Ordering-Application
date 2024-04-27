@@ -4,16 +4,14 @@ var utils = require('../utils/writer.js');
 var OrderService = require('../service/OrderService');
 var sendTask = require('../rabbit-utils/sendTask.js');
 
+
+
+let lastId = 0;
+
 function generateUniqueIntegerId() {
-  let id =0
-
-  while(id == 0) {
-    id = Math.floor(Math.random() * 1000);
-  }
-
-  return id;
+  lastId += 1;
+  return lastId;
 }
-
 
 
 module.exports.addOrder = function addOrder(req, res, next) {

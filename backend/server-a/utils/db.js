@@ -6,7 +6,8 @@ const connectDB = async () => {
         const options = {
             useNewUrlParser: true,
         };
-        const connection = await mongoose.connect('mongodb://mongo:27017/SandwichDb', options ); 
+   
+        const connection = await mongoose.connect('mongodb://mongo:27017/SandwichHouse', options ); 
         if (connection){
             console.log('Connected to MongoDB');
         }

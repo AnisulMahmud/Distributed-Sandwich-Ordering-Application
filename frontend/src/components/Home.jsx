@@ -48,7 +48,7 @@ export const Home = () => {
         <div className='post-order'>
           {loading && <p>Loading...</p>}
           {!loading && <p>Order submitted successfully! Your order Id is {order.id}.
-           Your order inital Status is orderd</p>}
+           Your inital status of the order is ordered</p>}
         </div>
       )}
     
